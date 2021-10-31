@@ -25,8 +25,8 @@ if __name__ == "__main__":
     while(t > 0):
         # take n and d input
         n_d = [int(x) for x in input().strip().split()]
-        n = n_d[0]
-        d = n_d[1]
+        
+        
         arr = [int(x) for x in input().strip().split()]
 
         # call the rotate function

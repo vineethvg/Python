@@ -1,0 +1,6 @@
+Sequence algorithms
+
+1) Bit map algorithms - fuzzy algorithm that determines if strings are approximately equal
+2) String metrics - computes a similarity or dissimilarity (distance) score between two pairs of text strings
+3) Hamming distance - sum number of positions which are different
+4) Jaro–Winkler distance - is a measure of similarity between two strings
