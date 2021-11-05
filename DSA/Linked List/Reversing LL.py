@@ -32,6 +32,8 @@ class LinkedList:
         new_node.next = self.head
         self.head = new_node
 
+# ==================FUNTION TO REVERSE THE LIST========================
+
     def reverse(self):
         prev = None
         current = self.head
@@ -41,6 +43,8 @@ class LinkedList:
             prev = current
             current = next
         self.head = prev
+
+# ====================================================================
 
     def print(self):
         if self.head is None:
