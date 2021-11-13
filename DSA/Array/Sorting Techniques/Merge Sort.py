@@ -1,3 +1,4 @@
+# a is array, l & r are left-right most element,mid is the pivot point
 def merge(a, l, r, mid):
 
     # sublists with the range
@@ -47,8 +48,9 @@ def mergesort(a, l, r):
     merge(a, l, r, mid)
 
 
+# Driver Code
 a = [9, 4, 7, 6, 3, 1, 5]
-l = 0
-r = len(a)-1
+l = 0  # left most element
+r = len(a)-1  # right most element
 mergesort(a, l, r)
 print(a)
