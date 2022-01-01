@@ -206,6 +206,39 @@ class LinkedList:
         else:
             n.ref = n.ref.ref
 
+    # ===============================================================================================================================
+    # DELETING THE WHOLE LIST
+
+    def deleteList(self):
+        n = self.head
+        while n is not None:
+            prev = n.ref
+            del n.data
+            n = prev
+    # ==================================================================
+    # GETTING THE COUNT OF THE NODES
+
+    def getCount(self):
+        n = self.head
+        cnt = 0
+
+        while n is not None:
+            cnt += 1
+            n = n.ref
+        return cnt
+
+    # ===============================================================================================================================
+    # SEARCHING THE LIST
+
+    def search(self, x):
+        n = self.head
+
+        while n is not None:
+            if n.data == x:
+                return True
+            n = n.next
+        return False
+
 
 LL1 = LinkedList()
 LL1.add_begin(10)
@@ -214,7 +247,13 @@ LL1.add_end(30)
 LL1.add_end(40)
 LL1.add_before(100, 30)
 LL1.add_after(200, 40)
+print(LL1.search(20))
+LL1.print_LL()
+print()
+print(LL1.getCount())
+
 # LL1.delete_begin()
 # LL1.delete_end()
-LL1.del_val(50)
-LL1.print_LL()
+# LL1.del_val(50)
+LL1.deleteList()
+print("The List is deleted")

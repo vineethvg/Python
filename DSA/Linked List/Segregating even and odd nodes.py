@@ -1,15 +1,10 @@
 # Python program to segregate even and odd nodes in a
-
 head = None
-
-# Node class
 
 
 class Node:
-
-    # Function to initialise the node object
     def __init__(self, data):
-        self.data = data  # Assign data
+        self.data = data
         self.next = None
 
 
