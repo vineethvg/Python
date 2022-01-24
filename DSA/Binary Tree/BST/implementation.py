@@ -234,7 +234,7 @@ for i in list1:
 #print("Pre- Order")
 # root.postorder()
 if count(root) > 1:
-    root.delete(10, root.key)
+    root.delete(98, root.key)
 else:
     print("cant perform deletion operation!")
 print("after deleting")

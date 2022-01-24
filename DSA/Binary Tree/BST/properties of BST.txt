@@ -1,0 +1,101 @@
+----------------------------------------------------------------------------
+
+If N node the N-1 edges
+
+types of tree
+1) General tree : No restriction on number of children.
+2) Binary tree: Every node can have atmost two children.
+   1) Full Binary tree : every node can have either 0 or 2 children
+   2) Complete Binary tree : all levels except last level 
+      should be completely filled left to right
+   3) perfect Binary tree : internal nodes contain two children, all leaf nodes 
+      present at same level
+   4) Balanced Binary tree : Check absolute dif of left and right sub tree, if its 
+      less or equal to 1, then its BB tree.
+   5) Pathological Binary tree : every parent tree node has one child node
+   
+----------------------------------------------------------------------------
+Handshaking lemma:- 
+1) Its about an undirected graph.
+2) Its says, in every finite undirected graph, an even number of vertices will
+   always have an odd degree.
+
+
+How is this helpful in Tree DS??????
+
+1) In a k-ary tree where every node has either 0 or k children, the following is true.
+
+L = (k-1)*I + 1
+L = number of leaf nodes
+I = number of internal nodes
+
+case 1: Root is leaf i,e only one node in tree. Thus,
+--> L = 1, I = 0 
+
+case 2: Root is an Internal Node
+--> Total number of edges in a tree is nodes - 1
+i,e |E| = (L+I) - 1 (General property of trees)
+
+=====================
+Sum of all degrees = 2 * (Sum of Edges)
+
+Sum of degrees of leaves + Sum of degrees for Internal Node
++ Root's degree = 2 * (No of nodes - 1)
+
+L + (I-1)*(k+1) + k = 2 * (L+I - 1)
+solving,
+(k-1)*I + 1 = L
+=======================
+
+2) In a binary tree, the number of leaf nodes(internal nodes) is always one 
+   more than the nodes with two children.
+   L = T + 1
+----------------------------------------------------------------------------
+Enumeration of Binary trees:-
+
+         o
+       /   \         unlabeled tree
+     o       o
+
+         A
+       /   \         labeled tree
+     B       C
+
+For N = 1, the only tree is :
+            o
+
+For N = 2, there are two trees :
+
+            o     o
+          /         \
+        o             o
+
+
+Let T(n) be the count of n nodes : 
+T(0) = 1 (one empty tree)
+T(1) = 1 (one possibilty as per above figure)
+T(2) = 2    
+
+T(3) = T(0)*T(2) + T(1)*T(1) + T(2)*T(0)
+     = 1*2       +   1*1     +   2*1
+     = 5
+
+The above example represents n'th Catalan Numbers:
+1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862...................
+
+its also evaluated by  T(n) = (2n)! / (n+1)! * n!
+
+--> The number of BST with n nodes is also same as the number of 
+unlabeled trees.
+   Why???????????????????????????
+   Because, in BST we can make any key as root......!!
+   If the root is i'th key, then i-1 keys goes on one side 
+   and(n-1) keys on the other side
+
+--> How many labeled BST can be there with n nodes?
+   Every unlabeled tree with n nodes can create n! labeled trees.
+
+   Number of labeled trees = Number of unlabeled trees * n!
+                           = [ (2n)!/(n+1)! * n! ] * n!
+
+----------------------------------------------------------------------------

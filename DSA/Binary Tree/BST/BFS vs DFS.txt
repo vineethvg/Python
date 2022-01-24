@@ -1,0 +1,19 @@
+A tree can be traversed in two different ways
+--> BFS(level order) and DFS(inorder,preorder and postorder)
+
+
+--> All four traversals require O(n) time, as they visit every node only once
+--> Extra Space required by Level Order Traversals is O(w), w is max width
+    of Binary Tree. Queue one  by one stores nodes at different levels.
+--> Extra Space required by Depth first Traversals is O(h), h is max height
+    of Binary Tree. Stack stores all ancestors of a node.
+
+
+--> Worst case occurs when BST is perfect binary tree with number of nodes
+    like 1,3,7,15.....etc
+    The value of 2^h is ceil(n/2) 
+    (ceil returns integer value that is bigger than or equal to a number)
+--> Height of a Balanced BST is O(Logn).
+    Worst case occurs for skewed tree and worst case height becomes O(n).
+--> So the worst case for both is O(n).
+
