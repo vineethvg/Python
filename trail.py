@@ -100,13 +100,15 @@ def miniMaxSum(arr):
     n = len(arr)
     mi = 0
     mx = 0
+    arr.sort()
     for i in range(0, n-1):
         mi += arr[i]
         mx += arr[i+1]
     q = min(mi, mx)
     b = max(mi, mx)
-    return list(q, b).split('(')
+    return q, b
 
 
-arr = [1, 2, 3, 4, 5]
-print(miniMaxSum(arr))
+arr = [4, 6, 2, 1, 8]
+a = miniMaxSum(arr)
+print(*a)
