@@ -1,0 +1,1 @@
+Stack uses LIFO or FILO
